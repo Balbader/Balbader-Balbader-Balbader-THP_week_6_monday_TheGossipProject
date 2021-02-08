@@ -1,0 +1,451 @@
+  [1m[35m (118.5ms)[0m  [1m[35mCREATE DATABASE "the_gossip_project_03_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (68.2ms)[0m  [1m[35mCREATE DATABASE "the_gossip_project_03_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3525809918934813090)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGossips (20210208203144)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "gossips" ("id" bigserial primary key, "gossip_author" character varying, "gossip_content" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210208203144_create_gossips.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210208203144"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-08 20:47:29.798244"], ["updated_at", "2021-02-08 20:47:29.798244"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3525809918934813090)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2021-02-08 21:47:49 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/basilalbader/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 493ms (Views: 482.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-08 21:48:47 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-08 21:49:11 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-08 21:51:18 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-08 21:57:41 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 88ms (Views: 82.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2021-02-08 21:57:54 +0100
+Processing by TeamController#our_team as HTML
+  Rendering team/our_team.html.erb within layouts/application
+  Rendered team/our_team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2021-02-08 21:58:08 +0100
+Processing by ContactController#get_in_touch as HTML
+  Rendering contact/get_in_touch.html.erb within layouts/application
+  Rendered contact/get_in_touch.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-08 21:58:16 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:03:29 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac30d67cf0>
+Did you mean?  font_path
+               post_path):
+    12:   <body>
+    13:   <header>
+    14:       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    15:         <%= link_to "Accueil", root_path, class: "navbar-brand" %>
+    16:         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    17:           <span class="navbar-toggler-icon"></span>
+    18:         </button>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2283949191970653431_16540'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:04:16 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac38994f30>
+Did you mean?  font_path
+               post_path):
+    18:   <body>
+    19:   <header>
+    20:       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    21:         <%= link_to "Accueil", root_path, class: "navbar-brand" %>
+    22:         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    23:           <span class="navbar-toggler-icon"></span>
+    24:         </button>
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__2283949191970653431_17200'
+Started GET "/contact" for 127.0.0.1 at 2021-02-08 22:04:18 +0100
+Processing by ContactController#get_in_touch as HTML
+  Rendering contact/get_in_touch.html.erb within layouts/application
+  Rendered contact/get_in_touch.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00007fac317767a0>:0x00007fac326b2660>
+Did you mean?  font_path
+               post_path):
+    18:   <body>
+    19:   <header>
+    20:       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    21:         <%= link_to "Accueil", root_path, class: "navbar-brand" %>
+    22:         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    23:           <span class="navbar-toggler-icon"></span>
+    24:         </button>
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__2283949191970653431_17780'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:04:24 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac324f7758>
+Did you mean?  font_path
+               post_path):
+    18:   <body>
+    19:   <header>
+    20:       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    21:         <%= link_to "Accueil", root_path, class: "navbar-brand" %>
+    22:         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    23:           <span class="navbar-toggler-icon"></span>
+    24:         </button>
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__2283949191970653431_18340'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:07:49 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `static_pages_team_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac31664218>):
+    24:         </button>
+    25:         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    26:           <div class="navbar-nav">
+    27:             <%= link_to "Team", static_pages_team_path, class: "nav-item nav-link" %>
+    28:             <%= link_to "Contact", static_pages_contact_path, class: "nav-item nav-link" %>
+    29:           </div>
+    30:         </div>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__2283949191970653431_18900'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:08:07 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `static_pages_team_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac31ae6688>):
+    24:         </button>
+    25:         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    26:           <div class="navbar-nav">
+    27:             <%= link_to "team", static_pages_team_path, class: "nav-item nav-link" %>
+    28:             <%= link_to "contact", static_pages_contact_path, class: "nav-item nav-link" %>
+    29:           </div>
+    30:         </div>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__2283949191970653431_19480'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:08:32 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `static_pages_team_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac350cafd8>):
+    24:         </button>
+    25:         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    26:           <div class="navbar-nav">
+    27:             <%= link_to "team", static_pages_team_path, class: "nav-item nav-link" %>
+    28:             <%= link_to "contact", static_pages_contact_path, class: "nav-item nav-link" %>
+    29:           </div>
+    30:         </div>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__2283949191970653431_20040'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:09:17 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `static_pages_team_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac30dad9f8>):
+    24:         </button>
+    25:         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    26:           <div class="navbar-nav">
+    27:             <%= link_to "our_team", static_pages_team_path, class: "nav-item nav-link" %>
+    28:             <%= link_to "contact", static_pages_contact_path, class: "nav-item nav-link" %>
+    29:           </div>
+    30:         </div>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__2283949191970653431_20620'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:11:16 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `static_pages_team_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac3167c458>):
+    24:         </button>
+    25:         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    26:           <div class="navbar-nav">
+    27:             <%= link_to "team", static_pages_team_path, class: "nav-item nav-link" %>
+    28:             <%= link_to "contact", static_pages_contact_path, class: "nav-item nav-link" %>
+    29:           </div>
+    30:         </div>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__2283949191970653431_21200'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:11:50 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `static_pages_team_path' for #<#<Class:0x00007fac38a7f8c8>:0x00007fac314ed218>):
+    19:         </button>
+    20:         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    21:           <div class="navbar-nav">
+    22:             <%= link_to "team", static_pages_team_path, class: "nav-item nav-link" %>
+    23:             <%= link_to "contact", static_pages_contact_path, class: "nav-item nav-link" %>
+    24:           </div>
+    25:         </div>
+  
+app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__2283949191970653431_21780'
+Started GET "/" for 127.0.0.1 at 2021-02-08 22:12:22 +0100
+Processing by IndexController#new as HTML
+  Rendering index/new.html.erb within layouts/application
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/index/new.html.erb:6
+  Rendered index/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-02-08 22:12:25 +0100
+Processing by PostController#create_post as HTML
+  Rendering post/create_post.html.erb within layouts/application
+  Rendered post/create_post.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2021-02-08 22:12:26 +0100
+Processing by TeamController#our_team as HTML
+  Rendering team/our_team.html.erb within layouts/application
+  Rendered team/our_team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2021-02-08 22:12:27 +0100
+Processing by ContactController#get_in_touch as HTML
+  Rendering contact/get_in_touch.html.erb within layouts/application
+  Rendered contact/get_in_touch.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-02-08 22:12:28 +0100
+Processing by PostController#create_post as HTML
+  Rendering post/create_post.html.erb within layouts/application
+  Rendered post/create_post.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2021-02-08 22:12:29 +0100
+Processing by TeamController#our_team as HTML
+  Rendering team/our_team.html.erb within layouts/application
+  Rendered team/our_team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2021-02-08 22:12:29 +0100
+Processing by ContactController#get_in_touch as HTML
+  Rendering contact/get_in_touch.html.erb within layouts/application
+  Rendered contact/get_in_touch.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-02-08 22:12:30 +0100
+Processing by PostController#create_post as HTML
+  Rendering post/create_post.html.erb within layouts/application
+  Rendered post/create_post.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2021-02-08 22:12:30 +0100
+Processing by TeamController#our_team as HTML
+  Rendering team/our_team.html.erb within layouts/application
+  Rendered team/our_team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2021-02-08 22:12:31 +0100
+Processing by ContactController#get_in_touch as HTML
+  Rendering contact/get_in_touch.html.erb within layouts/application
+  Rendered contact/get_in_touch.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-02-08 22:12:32 +0100
+Processing by PostController#create_post as HTML
+  Rendering post/create_post.html.erb within layouts/application
+  Rendered post/create_post.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2021-02-08 22:12:33 +0100
+Processing by TeamController#our_team as HTML
+  Rendering team/our_team.html.erb within layouts/application
+  Rendered team/our_team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2021-02-08 22:12:33 +0100
+Processing by ContactController#get_in_touch as HTML
+  Rendering contact/get_in_touch.html.erb within layouts/application
+  Rendered contact/get_in_touch.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-02-08 22:12:36 +0100
+Processing by PostController#create_post as HTML
+  Rendering post/create_post.html.erb within layouts/application
+  Rendered post/create_post.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-02-08 22:13:09 +0100
+Processing by PostController#create_post as HTML
+  Rendering post/create_post.html.erb within layouts/application
+  Rendered post/create_post.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-02-08 22:14:25 +0100
+Processing by PostController#create_post as HTML
+  Rendering post/create_post.html.erb within layouts/application
+  Rendered post/create_post.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2021-02-08 22:14:31 +0100
+Processing by TeamController#our_team as HTML
+  Rendering team/our_team.html.erb within layouts/application
+  Rendered team/our_team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2021-02-08 22:14:32 +0100
+Processing by ContactController#get_in_touch as HTML
+  Rendering contact/get_in_touch.html.erb within layouts/application
+  Rendered contact/get_in_touch.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2021-02-08 22:14:33 +0100
+Processing by TeamController#our_team as HTML
+  Rendering team/our_team.html.erb within layouts/application
+  Rendered team/our_team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2021-02-08 22:14:33 +0100
+Processing by PostController#create_post as HTML
+  Rendering post/create_post.html.erb within layouts/application
+  Rendered post/create_post.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+

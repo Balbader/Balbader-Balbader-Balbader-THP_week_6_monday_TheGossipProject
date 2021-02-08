@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(85, 255, 0), rgb(255, 247, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+    color: #507dbc;
+  }
+  
+  a:hover {
+    color: #507dbc;
+    text-decoration: underline;
+  
+  }
+  
+  .container {
+    max-width: 1080px;
+  }
+  
+  .btn-primary {
+    background-color: #507dbc;
+  }
+  
+  .gossip-card {
+    background-color: #d8d4cf;
+    color: #262626;
+  }
+  
+  .attribute {
+    font-weight: bold;
+    color: #507dbc;
+  }
